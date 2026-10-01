@@ -2,17 +2,27 @@
 
 int main(void) {
 
-    int n, i;
-    int sum = 0;
+    int a, b;
+    char op; //operator
 
-    printf("input a number: ");
-    scanf("%d", &n);
-    
-    for (i = 0; i <= n; i++) {
-        sum = sum + i;
+    printf("enter the calculation: ");
+    scanf("%d %c %d", &a, &op, &b);
+
+    if (op == '+') {
+        printf("= %d", a+b);
     }
-
-    printf("The result is %d.\n", sum);
+    else if (op == '-') {
+        printf("= %d", a-b);
+    }
+    else if (op == '*') {
+        printf("= %d", a*b);
+    }
+    else if (op == '/') {
+        printf("= %d", a/b);
+    }
+    else if (op == '%') {
+        printf("= %d", a%b);
+    }
 
     return 0;
 }
