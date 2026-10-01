@@ -2,27 +2,25 @@
 
 int main(void) {
 
-    int a, b;
-    char op; //operator
+    int answer = 59;
+    int n;
+    int count = 0;
 
-    printf("enter the calculation: ");
-    scanf("%d %c %d", &a, &op, &b);
+    do {
+        printf("Guess a number: ");
+        scanf("%d", &n);
 
-    if (op == '+') {
-        printf("= %d", a+b);
-    }
-    else if (op == '-') {
-        printf("= %d", a-b);
-    }
-    else if (op == '*') {
-        printf("= %d", a*b);
-    }
-    else if (op == '/') {
-        printf("= %d", a/b);
-    }
-    else if (op == '%') {
-        printf("= %d", a%b);
-    }
+        count ++;
+
+        if (n < answer) {
+            printf("Low!\n");
+        }
+        else if (n > answer) {
+            printf("High!\n");
+        }
+    } while (n != answer);
+
+    printf("Congratulation! trials: %d", count);
 
     return 0;
 }
